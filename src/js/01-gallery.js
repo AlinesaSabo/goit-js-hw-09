@@ -82,13 +82,7 @@ const createGalleryMarkup = images =>
 
 gallery.insertAdjacentHTML('beforeend', createGalleryMarkup(images));
 
-document.addEventListener('DOMContentLoaded', function () {
-  const lightbox = new SimpleLightbox('.gallery a', {
-    captions: true,
-    captionsData: 'alt',
-    captionDelay: 250,
-    animationSpeed: 300,
-    fadeSpeed: 300,
-  });
-  lightbox.open(clickedLink);
+new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
 });

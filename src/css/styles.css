@@ -1,4 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .gallery {
+  font-family: 'Montserrat', sans-serif;
   margin: 24px auto;
   max-width: 1140px;
   display: flex;
@@ -29,6 +36,8 @@
 }
 
 .feedback-form {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   width: 360px;
   padding: 24px;
 }
@@ -36,41 +45,42 @@
 .feedback-form > label {
   width: 100%;
   margin-bottom: 16px;
-  padding: 8px;
   display: flex;
   flex-direction: column;
 }
 
+.feedback-form input,
 .feedback-form textarea {
-  height: 112px;
-}
-
-.feedback-form input {
+  font-family: 'Montserrat', sans-serif;
   border-radius: 5px;
   border: 1px solid #808080;
   height: 40px;
   margin-top: 8px;
+  box-sizing: border-box;
+  padding: 8px 24px;
 }
 
 .feedback-form textarea {
-  border-radius: 5px;
-  border: 1px solid #808080;
   height: 80px;
-  margin-top: 8px;
 }
-.feedback-form input:hover {
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
   border: 1px solid #000000;
 }
-.feedback-form input:active {
-  border: 1px solid #808080;
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #808080;
+  outline: none;
 }
 
 .feedback-form button {
   background-color: #4e75ff;
-  width: 86px;
+  width: 95px;
   height: 40px;
+  padding: 8px 16px 8px 16px;
   border-radius: 8px;
-  margin: 0 auto;
   font-size: 16px;
   cursor: pointer;
   border: none;
