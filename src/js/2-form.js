@@ -22,9 +22,13 @@ function populateForm() {
   }
 
   for (const key in savedFeedbackData) {
-    form.elements[key].value = savedFeedbackData[key];
+    if (form.elements[key]) {
+      form.elements[key].value = savedFeedbackData[key];
+      formData[key] = savedFeedbackData[key];
+    }
   }
 }
+
 populateForm();
 
 form.addEventListener('input', event => {
@@ -41,6 +45,6 @@ form.addEventListener('submit', event => {
   }
   console.log(formData);
   localStorage.removeItem(localStorageKey);
-  formData = '';
+  formData = { email: '', message: '' };
   form.reset();
 });
